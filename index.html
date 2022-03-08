@@ -44,9 +44,28 @@
 
         <form action="#">
           <input type="text" placeholder="First Name" />
+          <img src="images/icon-error.svg" alt="" aria-hidden="true" />
+          <p class="validation-text"></p>
+
           <input type="text" placeholder="Last Name" />
-          <input type="email" name="" id="" placeholder="Email Address" />
-          <input type="password" name="" id="" placeholder="Password" />
+          <p class="validation-text"></p>
+
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email Address"
+          />
+          <p class="validation-text" id="validation-email"></p>
+
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+          />
+          <p class="validation-text"></p>
+
           <button type="submit">Claim your free trial</button>
 
           <div class="form__footer">
@@ -57,7 +76,7 @@
       </div>
     </main>
 
-    <!-- Validation JS -->x
+    <!-- Validation JS -->
     <script src="app/js/script.js"></script>
   </body>
 </html>

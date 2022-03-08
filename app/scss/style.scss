@@ -11,12 +11,24 @@ body {
     background-color: var(--red);
     background-blend-mode: screen;
   }
+
+  @include breakpoint(large) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .container {
   text-align: center;
   color: white;
   padding: 40px 20px;
+
+  @include breakpoint(large) {
+    display: flex;
+    max-width: 1100px;
+    padding: 0;
+  }
 }
 
 .intro {
@@ -25,6 +37,10 @@ body {
     line-height: 1.2;
     font-size: rem(26);
     padding-top: rem(25);
+
+    @include breakpoint(large) {
+      font-size: rem(40);
+    }
   }
 
   &__description {
@@ -32,6 +48,17 @@ body {
     line-height: 1.4;
     margin: rem(30) 0;
     padding: 0 10px;
+
+    @include breakpoint(large) {
+      padding: 0;
+    }
+  }
+
+  @include breakpoint(large) {
+    flex: 1;
+    align-self: center;
+    text-align: left;
+    padding: 0 40px;
   }
 }
 
@@ -60,6 +87,14 @@ body {
         filter: brightness(130%);
       }
     }
+
+    @include breakpoint(large) {
+      font-size: rem(12);
+    }
+  }
+
+  @include breakpoint(large) {
+    flex: 1;
   }
 }
 
@@ -75,13 +110,20 @@ form {
     rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 
   input {
-    margin: 10px 0 25px 0;
+    position: relative;
+    margin: 0;
     padding: 15px;
     border-radius: 5px;
     color: var(--darkBlue);
     font-weight: 600;
     font-family: "Poppins", sans-serif;
     border: 1px solid var(--grayishBlue);
+    transition: border 100ms ease-in-out;
+
+    &:focus {
+      outline: none;
+      border: 1px solid var(--darkBlue);
+    }
   }
 
   button {
@@ -101,6 +143,38 @@ form {
 
     &:hover {
       filter: brightness(110%);
+      cursor: pointer;
     }
   }
+}
+
+.validation-text {
+  color: var(--red);
+  padding: 0;
+  margin-top: 5px;
+  text-align: right;
+  font-size: rem(10);
+  font-style: italic;
+}
+
+.empty {
+  border: 2px solid var(--red);
+
+  &:focus {
+    outline: none;
+    border: 2px solid var(--red);
+  }
+}
+
+img {
+  position: absolute;
+  transform: translateY(50%);
+  right: 0;
+}
+
+input::after {
+  content: url("../images/icon-error.svg");
+  width: 100%;
+  height: 100%;
+  display: inline-block;
 }

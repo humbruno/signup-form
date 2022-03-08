@@ -55,11 +55,25 @@ body {
     background-blend-mode: screen;
   }
 }
+@media (min-width: 64em) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 .container {
   text-align: center;
   color: white;
   padding: 40px 20px;
+}
+@media (min-width: 64em) {
+  .container {
+    display: flex;
+    max-width: 1100px;
+    padding: 0;
+  }
 }
 
 .intro__title {
@@ -68,11 +82,29 @@ body {
   font-size: 1.625rem;
   padding-top: 1.5625rem;
 }
+@media (min-width: 64em) {
+  .intro__title {
+    font-size: 2.5rem;
+  }
+}
 .intro__description {
   font-weight: 400;
   line-height: 1.4;
   margin: 1.875rem 0;
   padding: 0 10px;
+}
+@media (min-width: 64em) {
+  .intro__description {
+    padding: 0;
+  }
+}
+@media (min-width: 64em) {
+  .intro {
+    flex: 1;
+    align-self: center;
+    text-align: left;
+    padding: 0 40px;
+  }
 }
 
 .form__title {
@@ -95,6 +127,16 @@ body {
   cursor: pointer;
   filter: brightness(130%);
 }
+@media (min-width: 64em) {
+  .form__footer {
+    font-size: 0.75rem;
+  }
+}
+@media (min-width: 64em) {
+  .form {
+    flex: 1;
+  }
+}
 
 form {
   display: flex;
@@ -106,13 +148,19 @@ form {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 form input {
-  margin: 10px 0 25px 0;
+  position: relative;
+  margin: 0;
   padding: 15px;
   border-radius: 5px;
   color: var(--darkBlue);
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   border: 1px solid var(--grayishBlue);
+  transition: border 100ms ease-in-out;
+}
+form input:focus {
+  outline: none;
+  border: 1px solid var(--darkBlue);
 }
 form button {
   background-color: var(--green);
@@ -129,4 +177,35 @@ form button {
 }
 form button:hover {
   filter: brightness(110%);
+  cursor: pointer;
+}
+
+.validation-text {
+  color: var(--red);
+  padding: 0;
+  margin-top: 5px;
+  text-align: right;
+  font-size: 0.625rem;
+  font-style: italic;
+}
+
+.empty {
+  border: 2px solid var(--red);
+}
+.empty:focus {
+  outline: none;
+  border: 2px solid var(--red);
+}
+
+img {
+  position: absolute;
+  transform: translateY(50%);
+  right: 0;
+}
+
+input::after {
+  content: url("../images/icon-error.svg");
+  width: 100%;
+  height: 100%;
+  display: inline-block;
 }
