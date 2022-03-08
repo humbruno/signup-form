@@ -41,3 +41,92 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: rem(16);
 }
+
+body {
+  min-height: 100vh;
+  background: url("../images/bg-intro-mobile.png");
+  background-color: var(--red);
+  background-blend-mode: multiply;
+}
+@media (min-width: 40em) {
+  body {
+    background: url("../images/bg-intro-desktop.png");
+    background-color: var(--red);
+    background-blend-mode: screen;
+  }
+}
+
+.container {
+  text-align: center;
+  color: white;
+  padding: 40px 20px;
+}
+
+.intro__title {
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 1.625rem;
+  padding-top: 1.5625rem;
+}
+.intro__description {
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 1.875rem 0;
+  padding: 0 10px;
+}
+
+.form__title {
+  background-color: var(--accentBlue);
+  border-radius: 10px;
+  padding: 0.9375rem 3.125rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+.form__footer {
+  color: var(--grayishBlue);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  padding: 10px 30px;
+}
+.form__footer strong {
+  color: var(--red);
+  transition: filter 250ms ease-in-out;
+}
+.form__footer strong:hover {
+  cursor: pointer;
+  filter: brightness(130%);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+form input {
+  margin: 10px 0 25px 0;
+  padding: 15px;
+  border-radius: 5px;
+  color: var(--darkBlue);
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid var(--grayishBlue);
+}
+form button {
+  background-color: var(--green);
+  text-transform: uppercase;
+  color: white;
+  padding: 20px 5px;
+  border-radius: 5px;
+  margin: 10px 0;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  transition: filter 250ms ease-in-out;
+  letter-spacing: 1.5px;
+}
+form button:hover {
+  filter: brightness(110%);
+}
