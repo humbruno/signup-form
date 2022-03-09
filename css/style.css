@@ -66,12 +66,12 @@ body {
 .container {
   text-align: center;
   color: white;
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem;
 }
 @media (min-width: 64em) {
   .container {
     display: flex;
-    max-width: 1100px;
+    max-width: 70em;
     padding: 0;
   }
 }
@@ -91,7 +91,7 @@ body {
   font-weight: 400;
   line-height: 1.4;
   margin: 1.875rem 0;
-  padding: 0 10px;
+  padding: 0 0.625rem;
 }
 @media (min-width: 64em) {
   .intro__description {
@@ -103,7 +103,7 @@ body {
     flex: 1;
     align-self: center;
     text-align: left;
-    padding: 0 40px;
+    padding: 0 2.5rem;
   }
 }
 
@@ -117,7 +117,7 @@ body {
   color: var(--grayishBlue);
   font-size: 0.875rem;
   line-height: 1.7;
-  padding: 10px 30px;
+  padding: 0.625rem 1.875rem;
 }
 .form__footer strong {
   color: var(--red);
@@ -142,15 +142,15 @@ form {
   display: flex;
   flex-direction: column;
   background-color: white;
-  padding: 15px;
+  padding: 0.9375rem;
   border-radius: 10px;
-  margin-top: 30px;
+  margin-top: 1.875rem;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 form input {
   position: relative;
   margin: 0;
-  padding: 15px;
+  padding: 0.9375rem;
   border-radius: 5px;
   color: var(--darkBlue);
   font-weight: 600;
@@ -166,9 +166,9 @@ form button {
   background-color: var(--green);
   text-transform: uppercase;
   color: white;
-  padding: 20px 5px;
+  padding: 1.25rem 0.3125rem;
   border-radius: 5px;
-  margin: 10px 0;
+  margin: 0.625rem 0;
   border: none;
   font-family: "Poppins", sans-serif;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
@@ -183,7 +183,7 @@ form button:hover {
 .validation-text {
   color: var(--red);
   padding: 0;
-  margin-top: 5px;
+  margin-top: 0.3125rem;
   text-align: right;
   font-size: 0.625rem;
   font-style: italic;

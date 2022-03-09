@@ -22,11 +22,11 @@ body {
 .container {
   text-align: center;
   color: white;
-  padding: 40px 20px;
+  padding: rem(40) rem(20);
 
   @include breakpoint(large) {
     display: flex;
-    max-width: 1100px;
+    max-width: 70em;
     padding: 0;
   }
 }
@@ -47,7 +47,7 @@ body {
     font-weight: 400;
     line-height: 1.4;
     margin: rem(30) 0;
-    padding: 0 10px;
+    padding: 0 rem(10);
 
     @include breakpoint(large) {
       padding: 0;
@@ -58,7 +58,7 @@ body {
     flex: 1;
     align-self: center;
     text-align: left;
-    padding: 0 40px;
+    padding: 0 rem(40);
   }
 }
 
@@ -76,7 +76,7 @@ body {
     color: var(--grayishBlue);
     font-size: rem(14);
     line-height: 1.7;
-    padding: 10px 30px;
+    padding: rem(10) rem(30);
 
     strong {
       color: var(--red);
@@ -102,9 +102,9 @@ form {
   display: flex;
   flex-direction: column;
   background-color: white;
-  padding: 15px;
+  padding: rem(15);
   border-radius: 10px;
-  margin-top: 30px;
+  margin-top: rem(30);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
     rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
     rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
@@ -112,7 +112,7 @@ form {
   input {
     position: relative;
     margin: 0;
-    padding: 15px;
+    padding: rem(15);
     border-radius: 5px;
     color: var(--darkBlue);
     font-weight: 600;
@@ -130,9 +130,9 @@ form {
     background-color: var(--green);
     text-transform: uppercase;
     color: white;
-    padding: 20px 5px;
+    padding: rem(20) rem(5);
     border-radius: 5px;
-    margin: 10px 0;
+    margin: rem(10) 0;
     border: none;
     font-family: "Poppins", sans-serif;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
@@ -151,7 +151,7 @@ form {
 .validation-text {
   color: var(--red);
   padding: 0;
-  margin-top: 5px;
+  margin-top: rem(5);
   text-align: right;
   font-size: rem(10);
   font-style: italic;
