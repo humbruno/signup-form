@@ -10,17 +10,19 @@ form.addEventListener("submit", (e) => {
 
   for (let i = 0; i < inputs.length; i++) {
     if (!inputs[i].value) {
-      inputs[i].classList.add("empty");
+      inputs[i].classList.add("empty", "icon");
       validation[i].innerHTML = `${inputs[i].placeholder} cannot be empty`;
     } else {
-      inputs[i].classList.remove("empty");
+      inputs[i].classList.remove("empty", "icon");
       validation[i].innerHTML = "";
-    }
-  }
 
-  if (!email.value.match(pattern)) {
-    emailValidation.innerHTML = "Looks like this is not an email";
-  } else {
-    emailValidation.innerHTML = "";
+      if (!email.value.match(pattern)) {
+        emailValidation.innerHTML = "Looks like this is not an email";
+        email.classList.add("empty", "icon");
+      } else {
+        emailValidation.innerHTML = "";
+        email.classList.remove("empty", "icon");
+      }
+    }
   }
 });
